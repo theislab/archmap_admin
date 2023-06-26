@@ -63,9 +63,10 @@ atlasRouter.get("/api/atlases/user/:id", verifyIfNormal, async (req, res) => {
     const userId = req.params.id;
 
     // Connect to the database
-
+    console.log("User Id is ", userId);
     const atlasDocuments = await AtlasModel.find({ uploadedBy: userId });
-    console.log("atlasDocuments in get user/:Id ----> ", atlasDocuments);
+    console.log("atlasDocuments in get user/:Id  ----> ", atlasDocuments);
+
     // send the atlases back
     const atlasesPromises = atlasDocuments.map(async (doc) => {
       const { existsInGCP, fileSize } = await fileExists(doc._id.toString());
