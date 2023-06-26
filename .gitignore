@@ -1,0 +1,32 @@
+node_modules/
+package-lock.json
+yarn.lock
+.vscode/
+.idea/
+
+# dependencies
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+#data folder and secrets
+.env
+.h5ad
+/uploads
+/service_account_key
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
